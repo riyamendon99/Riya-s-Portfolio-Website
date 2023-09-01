@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/logo2.png">
+    <title>Riya's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- particles.js container -->
+    <div id="particles-js">
+    </div> <!-- stats - count particles -->
+    <div class="count-particles"> <span class="js-count-particles"></span></div>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script>particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 80,
+                    density: { enable: true, value_area: 320.6824121731046 }
+                },
+                color: { value: "#ffffff" },
+                shape: {
+                    type: "circle",
+                    stroke: { width: 0, color: "#000000" },
+                    polygon: { nb_sides: 5 },
+                    image: { src: "img/github.svg", width: 100, height: 100 }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: { enable: false, rotateX: 600, rotateY: 1200 }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 400, line_linked: { opacity: 1 } },
+                    bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+                    repulse: { distance: 200, duration: 0.4 },
+                    push: { particles_nb: 4 },
+                    remove: { particles_nb: 2 }
+                }
+            },
+            retina_detect: true
+        });
+        var count_particles, stats, update;
+        stats = new Stats();
+        stats.setMode(0);
+        stats.domElement.style.position = "absolute";
+        stats.domElement.style.left = "0px";
+        stats.domElement.style.top = "0px";
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector(".js-count-particles");
+        update = function () {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+    </script>
+
+    <!----Navigation Bar---------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#about"><img src="images/logo2.png" class="logo"></a>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contactme">Contact</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h3>Hello, I am Riya Mendon!</h3>
+                <br>
+                <h2><span id="text"></span></h2>
+                <br>
+                <button id="arrow">Get Started <ion-icon name="chevron-forward-circle-outline"></ion-icon></button>
+            </div>
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+            <script>
+                let typingText = new Typed("#text", {
+                    strings: ["Software Engineer", "Bharatnatyam Dancer", "Table Tennis Player"],
+                    loop: true,
+                    typeSpeed: 100,
+                    backSpeed: 50,
+                    backDelay: 1000,
+                })
+            </script>
+        </div>
+    </div>
+    <!--About Section-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="left-col reveal">
+                    <img src="images/RiyaPicture.jpg">
+                </div>
+                <div class="right-col reveal">
+                    <h1 class="subtitle">ABOUT ME</h1>
+                    <p>What is a paragraph? Paragraphs are the building blocks of papers. Many students define
+                        paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is
+                        half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is
+                        what constitutes a paragraph. The oldest classical British and Latin writing had little or no
+                        space between words and could be written in boustrophedon (alternating directions). Over time,
+                        text direction (left to right) became standardized. Word dividers and terminal punctuation
+                        became common. The first way to divide sentences into groups was the original paragraphos,
+                        similar to an underscore at the beginning of the new group.[1] The Greek parágraphos evolved
+                        into the pilcrow (¶), which in English manuscripts in the Middle Ages can be seen inserted
+                        inline between sentences.
+                        Ancient manuscripts also divided sentences into paragraphs with line breaks (newline) followed
+                        by an initial at the beginning of the next paragraph. An initial is an oversized capital letter,
+                        sometimes outdented beyond the margin of the text. This style can be seen, for example, in the
+                        original Old English manuscript of Beowulf. Outdenting is still used in English typography,
+                        though not commonly.[2] Modern English typography usually indicates a new paragraph by indenting
+                        the first line. This style can be seen in the (handwritten) United States Constitution from
+                        1787. For additional ornamentation, a hedera leaf or other symbol can be added to the
+                        inter-paragraph white space, or put in the indentation space.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!----Experiences Section------>
+    <div id="experience">
+        <div class="experiences">
+            <div class="exp-container left-container reveal">
+                <img src="images/logo1.png">
+                <div class="exp-text-box">
+                    <span class="left-container-arrow"></span>
+                    <h2>Accenture Solutions Private Limited</h2>
+                    <small>Jan 2021 - Jul 2023</small>
+                    <p>What is a paragraph? Paragraphs are the building blocks of papers. Many students define
+                        paragraphs in
+                        terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page
+                        long,
+                        etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a
+                        paragraph.</p>
+                </div>
+            </div>
+            <div class="exp-container right-container reveal">
+                <img src="images/barc logo.png">
+                <div class="exp-text-box">
+                    <span class="right-container-arrow"></span>
+                    <h2>Bhabha Atomic Research Center</h2>
+                    <small>Jun 2019 - Jul 2019</small>
+                    <p>What is a paragraph? Paragraphs are the building blocks of papers. Many students define
+                        paragraphs in
+                        terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page
+                        long,
+                        etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a
+                        paragraph.</p>
+                </div>
+            </div>
+            <div class="exp-container left-container reveal">
+                <img src="images/npcil_logo.jpg">
+                <div class="exp-text-box">
+                    <span class="left-container-arrow"></span>
+                    <h2>Nuclear Power Corporation of India Private Limited</h2>
+                    <small>Jun 2018 - Jul 2018</small>
+                    <p>What is a paragraph? Paragraphs are the building blocks of papers. Many students define
+                        paragraphs in
+                        terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page
+                        long,
+                        etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a
+                        paragraph.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('scroll', reveal)
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+                else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
+
+    <!--------------------Skills Section---------------------->
+    <div id="skill">
+        <h1>SKILLS</h1>
+        <div class="skill-container reveal">
+            <div class="skill-box">
+                <h3>Programming Languages</h3>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/java-logo.png" alt=""></div>
+                    <div class="right-name">JAVA</div>
+                </div>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/python-logo.png" alt=""></div>
+                    <div class="right-name">PYTHON</div>
+                </div>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/c-logo.png" alt=""></div>
+                    <div class="right-name">C</div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <h3>Web Technologies</h3>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/npcil_logo.jpg" alt=""></div>
+                    <div class="right-name">HTML5</div>
+                </div>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/barc logo.png" alt=""></div>
+                    <div class="right-name">CSS3</div>
+                </div>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/logo2.png" alt=""></div>
+                    <div class="right-name">JAVASCRIPT</div>
+                </div>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/logo2.png" alt=""></div>
+                    <div class="right-name">FLASK</div>
+                </div>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/logo2.png" alt=""></div>
+                    <div class="right-name">BOOTSTRAP</div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <h3>DATABASES & TOOLS</h3>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/logo2.png" alt=""></div>
+                    <div class="right-name">MS-SQL</div>
+                </div>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/npcil_logo.jpg" alt=""></div>
+                    <div class="right-name">FIREBASE</div>
+                </div>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/barc logo.png" alt=""></div>
+                    <div class="right-name">AZURE DEVOPS</div>
+                </div>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/logo2.png" alt=""></div>
+                    <div class="right-name">CONFLUENCE</div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <h3>CRM PLATFORM</h3>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/npcil_logo.jpg" alt=""></div>
+                    <div class="right-name">SALESFORCE</div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <h3>VERSION CONTROL</h3>
+                <div class="tabrow">
+                    <div class="left-img"><img src="images/npcil_logo.jpg" alt=""></div>
+                    <div class="right-name">GIT</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------Projects Section---------------->
+    <div id="projects">
+        <div class="proj-container"></div>
+        <h1 class="proj-header">PROJECTS</h1>
+        <div class="proj-list reveal">
+            <div class="component">
+                <h2>IOT CONTROLLER</h2>
+                <p>A sensor is a vital component of any automated system. In the era of Internet of Things (IoT) there
+                    are huge no of sensors deployed in remote and distinct areas as well. Managing these sensors is a
+                    big challenge. The current systems deployed in organizations are not efficient, not accurate and are
+                    difficult to use. Many times, organizations handle the IoT devices, their data, and their
+                    connectivity manually, without any automation. The main idea of our project is to develop a web
+                    application that helps to control, monitor and record sensor data in real-time. This system must be
+                    easy enough to be utilized by non-technical users as well as administrators. It aims at providing a
+                    real-time visual representation of the location of devices, predicts their expiry dates, generates
+                    reports of the performance of the individual devices on a periodic time basis. The users will have
+                    full access to the devices and the ability to manage the devices remotely. This project is not
+                    organization-specific, and it aims to serve any or every department which utilizes IoT devices for
+                    their functioning. Our primary stakeholders would be the Administrator of the organization. Our
+                    secondary stakeholder includes the users
+                    that work with the data generated by the devices and utilize them in the organization.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="component">
+                <h2>AUTOMATED CONTAMINATION ASSESMENT OF FRUIT</h2>
+                <p>A sensor is a vital component of any automated system. In the era of Internet of Things (IoT) there
+                    are huge no of sensors deployed in remote and distinct areas as well. Managing these sensors is a
+                    big challenge. The current systems deployed in organizations are not efficient, not accurate and are
+                    difficult to use. Many times, organizations handle the IoT devices, their data, and their
+                    connectivity manually, without any automation. The main idea of our project is to develop a web
+                    application that helps to control, monitor and record sensor data in real-time. This system must be
+                    easy enough to be utilized by non-technical users as well as administrators. It aims at providing a
+                    real-time visual representation of the location of devices, predicts their expiry dates, generates
+                    reports of the performance of the individual devices on a periodic time basis. The users will have
+                    full access to the devices and the ability to manage the devices remotely. This project is not
+                    organization-specific, and it aims to serve any or every department which utilizes IoT devices for
+                    their functioning. Our primary stakeholders would be the Administrator of the organization. Our
+                    secondary stakeholder includes the users
+                    that work with the data generated by the devices and utilize them in the organization.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="component">
+                <h2>LIGHTNING WEB COMPONENT PROJECTS</h2>
+                <p>A sensor is a vital component of any automated system. In the era of Internet of Things (IoT) there
+                    are huge no of sensors deployed in remote and distinct areas as well. Managing these sensors is a
+                    big challenge. The current systems deployed in organizations are not efficient, not accurate and are
+                    difficult to use. Many times, organizations handle the IoT devices, their data, and their
+                    connectivity manually, without any automation. The main idea of our project is to develop a web
+                    application that helps to control, monitor and record sensor data in real-time. This system must be
+                    easy enough to be utilized by non-technical users as well as administrators. It aims at providing a
+                    real-time visual representation of the location of devices, predicts their expiry dates, generates
+                    reports of the performance of the individual devices on a periodic time basis. The users will have
+                    full access to the devices and the ability to manage the devices remotely. This project is not
+                    organization-specific, and it aims to serve any or every department which utilizes IoT devices for
+                    their functioning. Our primary stakeholders would be the Administrator of the organization. Our
+                    secondary stakeholder includes the users
+                    that work with the data generated by the devices and utilize them in the organization.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <!------------Certification Section------------------>
+    <div id="certifications">
+        <div class="certification-container">
+            <h1>CERTIFICATIONS</h1>
+            <div class="certification-list reveal">
+                <div class="cert">
+                    <img src="images/Salesforce Certified Platform Developer I - Copy1024_1.jpg" alt="">
+                </div>
+                <div class="cert">
+                    <img src="images/Salesforce Certified Platform Developer I - Copy1024_1.jpg" alt="">
+                </div>
+                <div class="cert">
+                    <img src="images/Salesforce Certified Platform Developer I - Copy1024_1.jpg" alt="">
+                </div>
+            </div>
+            <div class="certification-list">
+                <div class="cert">
+                    <img src="images/Salesforce Certified Platform Developer I - Copy1024_1.jpg" alt="">
+                </div>
+                <div class="cert">
+                    <img src="images/Salesforce Certified Platform Developer I - Copy1024_1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------Contact me Section------------------------>
+    <div id="contactme">
+        <div class="contactme-container">
+            <h1>CONTACT ME</h1>
+            <div class="contactme-box">
+                <div class="contact-left">
+                    <img src="images/npcil_logo.jpg" alt="">
+                </div>
+                <div class="contact-right">
+                    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+                    <!--<div class="contact-mail-phone">
+                            <div class="mail-phone">
+                                <a href="mailto:rmendon@asu.edu"><ion-icon name="mail"></ion-icon>rmendon@asu.edu</a>
+                            </div>
+                            <div class="mail-phone">
+                                <a href="tel:+16239993745"><ion-icon name="call"></ion-icon>+1 (623)-999-3745</a>
+                            </div>
+                        </div> -->
+                    <div class="contact-icons">
+                        <a href="https://linkedin.com/in/riya-mendon/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="tel:+16239993745"><ion-icon name="call"></ion-icon></a>
+                        <a href="mailto:rmendon@asu.edu"><ion-icon name="mail"></ion-icon></a>
+                        <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="https://github.com/riyamendon99"><ion-icon name="logo-github"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © Riya Mendon | All rights reserved</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
