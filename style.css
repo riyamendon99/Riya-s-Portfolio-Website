@@ -193,10 +193,13 @@ nav ul a:hover::after{
     text-align: center;
     margin: 10px;
 }
-p{
+.right-col p{
     padding: 30px 30px;
     color: black;
     justify-content: center;
+    font-size: 21px;
+    font-weight: 600;
+    font-style: italic;
 }
 /*-----------Experiences Section-------------*/
 .experiences
@@ -546,7 +549,7 @@ p{
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    padding: 70px 10px 20px 10px;
+    padding: 70px 30px 70px 30px;
     color: white;
     display: inline-block;
     transition: transform 0.5s;
@@ -555,6 +558,14 @@ p{
 {
     color: #ff8c11;
     transform: translateY(-5px);
+}
+.contact-right p
+{
+    color: white;
+    font-size: x-large;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
 }
 .copyright
 {
