@@ -411,7 +411,7 @@ nav ul a:hover::after{
 }
 .right-name
 {
-    flex-basis: 60%;
+    flex-basis: 40%;
     text-align: center;
     color: white;
     padding: 40px 10px 10px 10px;
