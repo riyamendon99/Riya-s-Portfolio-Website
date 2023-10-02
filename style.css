@@ -319,8 +319,8 @@ nav ul a:hover::after{
 }
 .exp-container p
 {
-    margin-left: -30px;
-    margin-right: -20px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 .left-container-arrow
 {
@@ -414,7 +414,7 @@ nav ul a:hover::after{
     flex-basis: 60%;
     text-align: center;
     color: white;
-    padding: 40px 10px 30px 10px;
+    padding: 40px 10px 10px 10px;
 }
 
 /*------------------Projects Section--------------*/
@@ -432,9 +432,9 @@ nav ul a:hover::after{
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 1em;
-    padding: 70px 70px 70px 70px;
+    padding: 20px 20px 20px 20px
 }
 .component
 {
@@ -456,12 +456,22 @@ nav ul a:hover::after{
     text-align: center;
     color: black;
 }
+.component img
+{
+    width: 100%;
+}
 .component p
 {
     flex-basis: 50%;
     justify-content: center;
     color: black;
-    padding: 20px 10px 10px 10px;
+    padding: 20px 20px 20px 20px;
+}
+.component a
+{
+    color: black;
+    font-weight: 100;
+    padding: 20px 20px 20px 20px;
 }
 
 /*----------------Certification Section---------------*/
